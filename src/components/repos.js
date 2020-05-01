@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// Data Info
-import reposFile from '../data/repos.json';
 // Components 
 import Repo from '../components/repo';
 
@@ -14,16 +12,26 @@ const Repos = () => {
     const dataReposSession = sessionStorage.getItem("repos");
     
     let myRepos;
+
     if(dataReposSession){
       myRepos = JSON.parse(dataReposSession);
       setReposCount(myRepos.length);
       myRepos = myRepos.slice(0, 8);
       return setRepos(myRepos);
     }
-    
-    sessionStorage.setItem("repos", JSON.stringify(reposFile));
-    setReposCount(reposFile.length);
-    setRepos(reposFile.slice(0, 8));
+
+    const repoFetch = async () => {
+      const url = "https://api.github.com/users/plazmediaLab/repos";
+
+      const req = await fetch(url);
+      const res = await req.json();
+  
+      sessionStorage.setItem("res", JSON.stringify(res));
+      setReposCount(res.length);
+      setRepos(res.slice(0, 8));
+    }; 
+
+    repoFetch();
   }, [/* dependencia */]);
 
   return (
