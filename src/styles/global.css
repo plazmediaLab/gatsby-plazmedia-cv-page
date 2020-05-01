@@ -7,9 +7,17 @@
 .btn{
     @apply bg-teal-500 text-white font-bold rounded border-teal-700 py-2 px-4 border-b-2
 }
+.btn-pink{
+    @apply bg-pink-600 text-white font-bold rounded border-pink-800 py-2 px-4 border-b-2
+}
 .repo-list{
-    @apply grid grid-cols-3 gap-3
+    @apply grid grid-cols-4 gap-3
 }
 .repo-list li{
-    @apply bg-gray-200 p-3 rounded
+    @apply bg-gray-300 p-3 rounded
+}
+
+.img-avatar{
+    height: 30px!important;
+    @apply rounded-full mr-2
 }

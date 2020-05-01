@@ -1,10 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // Data Info
-import repos from '../data/repos.json';
+import reposFile from '../data/repos.json';
 // Components 
 import Repo from '../components/repo';
 
 const Repos = () => {
+
+  // Local STATE 
+  const [repos, setRepos] = useState([]);
+  const [reposcount, setReposCount] = useState(0);
+  
+  useEffect(() => {
+    const dataReposSession = sessionStorage.getItem("repos");
+    
+    let myRepos;
+    if(dataReposSession){
+      myRepos = JSON.parse(dataReposSession);
+      setReposCount(myRepos.length);
+      myRepos = myRepos.slice(0, 8);
+      return setRepos(myRepos);
+    }
+    
+    sessionStorage.setItem("repos", JSON.stringify(reposFile));
+    setReposCount(reposFile.length);
+    setRepos(reposFile.slice(0, 8));
+  }, [/* dependencia */]);
+
   return (
     <div className="max-w-4xl mx-auto my-4">
       <header className="text-center">
@@ -16,6 +37,11 @@ const Repos = () => {
           <Repo data={ item } key={ item.id } />
         )) }
       </ul>
+      <div className="text-center">
+        <a href="https://github.com/plazmediaLab" className="btn-pink" target="_blank" rel="noopener noreferrer">
+          See all repositories ({reposcount})
+        </a>
+      </div>
     </div>
   );
 };
