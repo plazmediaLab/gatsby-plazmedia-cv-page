@@ -35,7 +35,7 @@ const Repos = () => {
   }, [/* dependencia */]);
 
   return (
-    <div className="max-w-4xl mx-auto my-10">
+    <section className="max-w-4xl mx-auto my-10">
       <header className="text-center">
         <h2 className="text-3xl font-bold text-gray-800">My work in Open Source</h2>
         <p className="text-gray-800">Collaboration and code contribution</p>
@@ -50,7 +50,7 @@ const Repos = () => {
           See all repositories ({reposcount})
         </a>
       </div>
-    </div>
+    </section>
   );
 };
 

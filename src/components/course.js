@@ -8,7 +8,7 @@ const Course = ({ item }) => {
       <p className="text-gray-800 mr-2">
         Progress: <span className="text-xs inline-block bg-blue-400 rounded-lg px-2 text-white ">{ parseInt(item.progress) }%</span>
       </p>
-      <a href={ item.progress } className="text-pink-500">Go to course</a>
+      <a href={ item.progress } className="text-pink-500" target="_blank" rel="noopener noreferrer">Go to course</a>
     </div>
   );
 };

@@ -29,7 +29,7 @@ const CodigoFacilitoInfo = () => {
   const { username, courses } = dataInfo;
 
   return (
-    <div className="max-w-4xl mx-auto my-10">
+    <section className="max-w-4xl mx-auto my-10">
       <header className="text-center">
         <h2 className="text-3xl font-bold text-gray-800">Online course profile</h2>
         <p className="text-teal-500">
@@ -44,7 +44,7 @@ const CodigoFacilitoInfo = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
