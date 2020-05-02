@@ -26,7 +26,7 @@ const Repos = () => {
       const req = await fetch(url);
       const res = await req.json();
   
-      sessionStorage.setItem("res", JSON.stringify(res));
+      sessionStorage.setItem("repos", JSON.stringify(res));
       setReposCount(res.length);
       setRepos(res.slice(0, 8));
     }; 
@@ -35,7 +35,7 @@ const Repos = () => {
   }, [/* dependencia */]);
 
   return (
-    <div className="max-w-4xl mx-auto my-4">
+    <div className="max-w-4xl mx-auto my-10">
       <header className="text-center">
         <h2 className="text-3xl font-bold text-gray-800">My work in Open Source</h2>
         <p className="text-gray-800">Collaboration and code contribution</p>

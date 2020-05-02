@@ -21,3 +21,6 @@
     height: 30px!important;
     @apply rounded-full mr-2
 }
+.card{
+    @apply p-5 shadow border-gray-300 border rounded
+}

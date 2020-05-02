@@ -1,0 +1,23 @@
+{
+  "data": {
+    "email": "adriangd.1337@gmail.com",
+    "username": "adriangd1337",
+    "certificates": [],
+    "articles": [],
+    "courses": [{
+      "title": "Curso de Fundamentos de React",
+      "progress": "0.0",
+      "url": "http://codigofacilito.com/courses/react-intro-gratis"
+    }, {
+      "title": "Curso de Git Gratis",
+      "progress": "50.0",
+      "url": "http://codigofacilito.com/courses/git"
+    }, {
+      "title": "Curso Profesional de React",
+      "progress": "4.0",
+      "url": "http://codigofacilito.com/courses/react-profesional"
+    }],
+    "finished_courses": []
+  },
+  "errors": []
+}

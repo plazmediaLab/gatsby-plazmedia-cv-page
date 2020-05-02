@@ -3,6 +3,7 @@ import React from "react";
 import Header from '../components/header';
 import Repos from '../components/repos';
 import MetaHeader from '../components/metaHeader';
+import CodigoFacilitoInfo from "../components/codigofacilitoInfo";
 
 export default () => {
 
@@ -13,6 +14,8 @@ export default () => {
       <Header />
 
       <Repos />
+
+      <CodigoFacilitoInfo />
     </>
   )
 }
