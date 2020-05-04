@@ -1,0 +1,25 @@
+{
+  "slug": "skills",
+  "title": "My skills",
+  "description": "Specialties in which I have had the opportunity to highlight.",
+  "items": [
+    {
+      "name": "React",
+      "degree": "library",
+      "url": "https://es.reactjs.org/",
+      "score": "48%"
+    },
+    {
+      "name": "Gatsby",
+      "degree": "framework",
+      "url": "https://www.gatsbyjs.org/",
+      "score": "9%"
+    },
+    {
+      "name": "GraphQL",
+      "degree": "API req",
+      "url": "https://graphql.org/",
+      "score": "7%"
+    }
+  ]
+}

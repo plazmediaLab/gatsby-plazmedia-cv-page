@@ -1,0 +1,17 @@
+{
+  "slug": "personal",
+  "title": "Academic training",
+  "description": "My academic training, degrees of study and facilities I attended.",
+  "items": [
+    {
+      "name": "CBTa 115",
+      "degree": "Tec. en Informatica",
+      "score": "87"
+    },
+    {
+      "name": "UNADM",
+      "degree": "Lic. desarrollo de software",
+      "score": "91"
+    }
+  ]
+}

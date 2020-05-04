@@ -4,11 +4,18 @@
 
 @tailwind utilities;
 
+body{
+    @apply bg-gray-200
+}
+
 .btn{
     @apply bg-teal-500 text-white font-bold rounded border-teal-700 py-2 px-4 border-b-2
 }
 .btn-pink{
     @apply bg-pink-600 text-white font-bold rounded border-pink-800 py-2 px-4 border-b-2
+}
+.btn-back{
+    @apply bg-indigo-300 text-white font-bold rounded border-indigo-500 py-2 px-4 border-b-2
 }
 .repo-list{
     @apply grid grid-cols-4 gap-3
@@ -22,12 +29,33 @@
     @apply rounded-full mr-2
 }
 .card{
-    @apply p-5 shadow border-gray-300 border rounded
+    @apply p-5 shadow border-gray-300 border rounded bg-white
 }
 .card-img{
-    @apply shadow border-gray-300 border rounded
+    @apply shadow border-gray-300 border rounded bg-white
 }
 .contain-btn{
     display: grid;
     height: 100%!important;
+}
+.vertical-text{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    @apply text-xs font-bold py-3 px-1 bg-pink-500 text-white uppercase
+}
+.link-btn{
+    @apply bg-gray-300 p-5 rounded
+}
+.link-btn h3{
+    @apply text-lg font-bold text-teal-500
+}
+.link-btn p{
+    @apply text-xs text-gray-500
+}
+.link-btn:hover{
+    @apply bg-teal-500 shadow
+}
+.link-btn:hover h3,
+.link-btn:hover p{
+    color: #fff!important;
 }
